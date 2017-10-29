@@ -24,4 +24,7 @@ urlpatterns = [
     url('index/$', views.index),
     url('login_action/$', views.login_action),
     url(r'^event_manage/$', views.event_manage),
+    url('admin/', admin.site.urls),
+    url(r'^$', views.index),
+    url('accounts/login/$', views.index),
 ]

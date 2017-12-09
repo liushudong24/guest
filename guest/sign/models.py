@@ -10,7 +10,7 @@ class Event(models.Model):
     status = models.BooleanField()  # 状态
     address = models.CharField(max_length=200)  # 地址
     start_time = models.DateField('events time')  # 发布会时间
-    creat_time = models.DateField(auto_now=True)  # 创建时间，自动获取
+    create_time = models.DateField(auto_now=True)  # 创建时间，自动获取
 
     def __str__(self):
         return self.name
@@ -36,7 +36,7 @@ class Guest(models.Model):
     phone = models.CharField(max_length=16)  # 电话
     email = models.EmailField()  # 邮箱
     sign = models.BooleanField()  # 签到状态
-    creat_time = models.DateTimeField(auto_now=True)  # 创建时间，自动获取
+    create_time = models.DateTimeField(auto_now=True)  # 创建时间，自动获取
 
     class Meta:
         unique_together = ("event", "phone")

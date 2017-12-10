@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# username == 'admin' and password == 'liu199165'
 import os
 import sys
 

@@ -27,4 +27,5 @@ urlpatterns = [
     url('admin/', admin.site.urls),
     url(r'^$', views.index),
     url('accounts/login/$', views.index),
+    url(r'^guest_manage/$',views.guest_manage),
 ]

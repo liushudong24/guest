@@ -38,7 +38,7 @@
     </div>
 </div>
 <!--嘉宾列表-->
-<div class="row" >
+<div class="row">
     <div class="col-md-6">
         <table class="table table-striped">
             <thead>
@@ -66,6 +66,20 @@
         </table>
     </div>
 </div>
+<!--列表分页器-->
+<div class="paginator">
+    <span class="step-links">
+        {% if guests.has_previous %}
+            <a href="?上一页{{ guests.previous_page_number }}">上一页</a>
+        {% endif %}
+        <span class="current">
+        第{{ guests.number }}页，共{{ guests.paginator.num_pages }}页
+    </span>
+        {% if guests.has_next %}
+            <a href="?page={{ guests.next_page_number }}">下一页</a>
+        {% endif %}
+    </span>
 
+</div>
 </body>
 </html>

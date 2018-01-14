@@ -59,4 +59,4 @@ def guest_manage(request):
         contacts = paginator.page(paginator.num_pages)
     return render(request, "guest_manage.html", {"user": username, "guests": contacts})
     #  读取浏览器cookies
-    return render(request, "guest_manage.html", {"user": username, "guests": guest_list})
+    # return render(request, "guest_manage.html", {"user": username, "guests": guest_list})
